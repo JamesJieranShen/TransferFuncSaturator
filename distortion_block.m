@@ -4,7 +4,6 @@ function y = distortion_block(x, xdata)
 %   xdata: input audio
 %   ydata: output signal
 fs = 44100;
-
 gpre = x(1);
 gbias = x(2);
 tfunc_param = x(3:6);

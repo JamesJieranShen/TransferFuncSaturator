@@ -9,7 +9,7 @@ w2 = 2 * pi * fstop / fs;
 
 L = fs * 10;    % sweep is 10 seconds long;
 n = 1:L;
-x = 0.01 * sin(w1 * (L-1) * (exp(n .* log(w2/w1) / (L - 1))-1) / log(w2/w1));
+x = 0.01 * sin(w1 * (L) * (exp(n .* log(w2/w1) / (L))-1) / log(w2/w1));
 
 audiowrite("exponential sweep.wav", x, fs);
 
@@ -60,3 +60,5 @@ end
 
 plot(freq, amps);
 
+%%
+save LTI_filter.mat h_normalized;
